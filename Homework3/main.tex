@@ -1,0 +1,93 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+
+\def\ket#1{|#1\rangle}
+\def\bra#1{\langle#1|}
+
+\title{Quantum Computing homework 3}
+\author{Michael Skipper, n01162792}
+\date{Due November 2, 2020}
+
+\begin{document}
+
+\maketitle
+
+\section{Question 1}
+\\ \\
+\textbf{Part A}
+
+\begin{align*}
+    & X_1 \text{ is initialized to } \frac{1}{7}\ket{0} + \frac{6}{7}\ket1 \text{, and } X_2 \text{ is } \ket{0}
+    \\ \\ 
+    & CNOT(X_1, X_2) \text{ yields } \frac{1}{7}\ket{00} + \frac{6}{7}\ket{11} 
+    \\ \\ 
+    & CCOIN_\frac{1}{7} \text{ now yields } \frac{1}{7}\ket{00} + \frac{6}{7}(\frac{1}{7}\ket{10} + \frac{6}{7}\ket{11})
+    \\ \\ 
+    & \text{The joint state so far is } \frac{1}{7}\ket{000} + \frac{6}{49}\ket{100} + \frac{36}{49}\ket{110}
+    \\ \\ 
+    & CCNOT(X_1, X_2, X_3) \text{ now yields } \frac{1}{7}\ket{000} + \frac{6}{49}\ket{100} + \frac{36}{49}\ket{111}
+    \\ \\ 
+    & CCOIN_\frac{1}{7}(X_1) \text{ now yields } \frac{1}{7}\ket{000} +
+    \frac{6}{49}(\frac{1}{7}\ket{000} + \frac{6}{7}\ket{100}) + \frac{36}{49}(\frac{1}{7}\ket{011} + \frac{6}{7}\ket{111})
+    \\ \\
+    & \text{So, the joint state } (X_1, X_2, X_3) \text{ is: } 
+    \\ \\
+    &\frac{1}{7}\ket{000} + \frac{6}{49\times{7}}\ket{000} + \frac{6\times{6}}{49\times{7}}\ket{100}
+    + \frac{36}{49\times{7}}\ket{011} + \frac{6\times{36}}{49\times{7}}\ket{111}
+    \\ \\
+    &\frac{55}{343}\ket{000} + \frac{36}{343}\ket{100} + \frac{36}{343}\ket{011} + \frac{216}{343}\ket{111}
+    \\ \\
+\end{align*}
+\textbf{Part B}
+\begin{align*}
+    &\ket{0}: \frac{55}{343} + \frac{36}{343} = \frac{91}{343}
+    \\ \\
+    &\ket{1}: \frac{36}{343} + \frac{216}{343} = \frac{252}{343}
+\end{align*}
+
+\textbf{Part C} 
+\begin{align*}
+    \ket{0}:& \\ 
+    &\frac{55}{343}\ket{000} + \frac{36}{343}\ket{011}
+    \\ \\ 
+    &\frac{\frac{55}{343}}{\frac{91}{343}}\ket{000} + \frac{\frac{36}{343}}{\frac{91}{343}}\ket{011}
+    \\ \\ 
+    &\frac{55}{91}\ket{000} + \frac{36}{91}\ket{011}
+    \\ \\ \\ \\ 
+    \ket{1}:& \\ 
+    &\frac{36}{252}\ket{100} + \frac{216}{252}\ket{111}
+\end{align*}
+
+\section{Question 2}
+\textbf{Part A}
+\begin{align*}
+    & X_1 \text{ initialized to } \ket{1}, X_2 \text{ is } \ket{1}, X_3 is \ket{0}
+    \\ \\ 
+    & CNOT(X_2, X_3) \text{ yields } \ket{11}
+    \\ \\ 
+    & H(X_2) \text{ now yields } \frac{1}{\sqrt{2}}\ket{11} + \frac{1}{\sqrt{2}}\ket{10}
+    \\ \\ 
+    &\text{ joint state } (X_1, X_2, X_3) \text{ so far is } \frac{1}{\sqrt{2}}\ket{110} + \frac{1}{\sqrt{2}}\ket{100}
+    \\ \\ 
+    & CCNOT(X_1, X_2, X_3) \text{ now yields } \frac{1}{\sqrt{2}}\ket{111} + \frac{1}{\sqrt{2}}\ket{100}
+    \\ \\ 
+    & H(X_3) \text{ now yields } \frac{1}{\sqrt{2}}(\frac{1}{\sqrt{2}}\ket{111} + \frac{1}{\sqrt{2}}\ket{101}) + \frac{1}{\sqrt{2}}(\frac{1}{\sqrt{2}}\ket{011} - \frac{1}{\sqrt{2}}\ket{100})
+\end{align*}
+
+\textbf{Part B}
+\begin{align*}
+& \ket{0}: (\frac{1}{2})^2 + (\frac{1}{2})^2 = \frac{1}{2}
+\\ \\ 
+& \ket{1}: (\frac{1}{2})^2 + (\frac{1}{2})^2 = \frac{1}{2}
+\end{align*}
+
+\textbf{Part C} 
+\begin{align*}
+    & \ket{0}: \frac{1}{\sqrt{2}}\ket{111} + \frac{1}{\sqrt{2}}\ket{101}
+    \\ \\ 
+    & \ket{1}: \frac{1}{\sqrt{2}}\ket{011} + \frac{1}{\sqrt{2}}\ket{100}
+\end{align*}
+
+
+\end{document}
