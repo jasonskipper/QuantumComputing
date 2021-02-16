@@ -1,0 +1,210 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsmath}
+
+\def\ket#1{|#1\rangle}
+\def\bra#1{\langle#1|}
+
+\title{Quantum Computing Homework 4}
+\author{Michael Skipper, n01162792}
+
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Exercise 2.2}
+\textbf{A. }
+\begin{align*}
+    &\ket{u} = \ket{0} 
+    \\
+    &\ket{v} = -\ket{0}
+    \\ 
+    &\det{\begin{bmatrix}
+    1 & -1 \\ 0 & 0
+    \end{bmatrix}} = (1*0) - (-1*0) = 0 \\
+    &\text{Linearly dependent, so states are equivalent.}
+\end{align*} \\ 
+\textbf{B. }
+\begin{align*}
+    &\ket{u} = \ket{1} 
+    \\
+    &\ket{v} = i\ket{1}
+    \\ 
+    &\det{\begin{bmatrix}
+    0 & 0 \\ 1 & i
+    \end{bmatrix}} = (1*0) - (-1*0) = 0 \\
+    &\text{Linearly dependent, so states are equivalent.}
+\end{align*} \\ 
+\textbf{C. }
+\begin{align*}
+    &\ket{u} = \frac{1}{\sqrt{2}}(\ket{0} + \ket{1})
+    \\
+    &\ket{v} = \frac{1}{\sqrt{2}}(-\ket{0} + i\ket{1})
+    \\ 
+    &\det{\begin{bmatrix}
+    \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} & \frac{i}{\sqrt{2}}
+    \end{bmatrix}} = (\frac{1}{\sqrt{2}}*\frac{i}{\sqrt{2}}) - (-\frac{1}{\sqrt{2}}*\frac{1}{\sqrt{2}}) = \frac{1 + i}{2} \neq{0} \\
+    &\text{Linearly independent, so states are different.} \\ 
+    &\text{Measure }\ket{u}: \\ 
+    &\ket{0}: |\frac{1}{\sqrt{2}}|^2 = \frac{1}{2} \\ 
+    &\ket{1}: |\frac{1}{\sqrt{2}}|^2 = \frac{1}{2} \\ 
+    &\text{Measure }\ket{v}: \\ 
+    &\ket{0}: |\frac{-1}{\sqrt{2}}|^2 = \frac{1}{2} \\ 
+    &\ket{1}: |\frac{i}{\sqrt{2}}|^2 = \frac{1}{2}
+\end{align*} 
+\textbf{D. }
+\begin{align*}
+    &\ket{u} = \frac{1}{\sqrt{2}}(\ket{0} + \ket{1}) \\ 
+    & \ket{v} = \frac{1}{\sqrt{2}}(\ket{0} - \ket{1}) \\ 
+    &\det{\begin{bmatrix}
+    \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}}
+    \end{bmatrix}} = -\frac{1}{2} - \frac{1}{2} = -1 \neq{0} 
+    &\text{Linearly independent, so states are different.} 
+    \\ 
+    &\ket{u}: \\
+    &\ket{0} = |\frac{1}{\sqrt{2}}|^2 = \frac{1}{2} \\ 
+    &\ket{1} = |\frac{1}{\sqrt{2}}|^2 = \frac{1}{2} \\
+    &\ket{v}: \\
+    &\ket{0} = |\frac{1}{\sqrt{2}}|^2 = \frac{1}{2} \\ 
+    &\ket{1} = |-\frac{1}{\sqrt{2}}|^2 = \frac{1}{2} 
+\end{align*}
+\textbf{E. }
+\begin{align*}
+    &\ket{u} = \frac{1}{\sqrt{2}}(\ket{0} - \ket{1}) \\ 
+    & \ket{v} = \frac{1}{\sqrt{2}}(\ket{1} - \ket{0}) \\ 
+    &\det{\begin{bmatrix}
+    \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\ -\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}
+    \end{bmatrix}} = \frac{1}{2} - \frac{1}{2} = 0  
+    &\text{Linearly dependent, so states are equivalent.} 
+\end{align*}
+\textbf{F. }
+\begin{align*}
+    &\det{\begin{bmatrix}
+    \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}} \\ \frac{i}{\sqrt{2}} & \frac{i}{\sqrt{2}}
+    \end{bmatrix}} = i \neq{0}  
+    &\text{Linearly independent, so states are different.} 
+    \\ 
+    &\ket{u}: \\
+    &\ket{0} = |\frac{1}{\sqrt{2}}|^2 = \frac{1}{2} \\ 
+    &\ket{1} = |\frac{i}{\sqrt{2}}|^2 = \frac{1}{2} \\
+    &\ket{v}: \\
+    &\ket{0} = |\frac{-1}{\sqrt{2}}|^2 = \frac{1}{2} \\ 
+    &\ket{1} = |\frac{i}{\sqrt{2}}|^2 = \frac{1}{2} 
+\end{align*}
+\textbf{G. }
+\begin{align*}
+&\ket{u} = \frac{1}{\sqrt{2}}(\ket{+}+\ket{-}) = \ket{0} \\
+    &\det{\begin{bmatrix}
+    1 & 1 \\ 0 & 0
+    \end{bmatrix}} = 0   
+    &\text{Linearly dependent, so states are equivalent.} 
+\end{align*}
+\textbf{H. }
+\begin{align*}
+&\ket{u} = \frac{1}{\sqrt{2}}(\ket{i}-\ket{-i}) = i\ket{1} \\
+    &\det{\begin{bmatrix}
+    0 & 0 \\ i & 1
+    \end{bmatrix}} = 0   
+    &\text{Linearly dependent, so states are equivalent.} 
+\end{align*}
+\textbf{I. }
+\begin{align*}
+&\ket{u} = \ket{0} \\
+&\ket{v} = \ket{0}
+    &\det{\begin{bmatrix}
+    1 & 1 \\ 0 & 0
+    \end{bmatrix}} = 0   \\
+    &\text{Linearly dependent, so states are equivalent.} 
+\end{align*}
+\textbf{J. }
+\begin{align*}
+    &\det{\begin{bmatrix}
+    \frac{1}{\sqrt{2}} & \frac{e^{\frac{-i*\pi}{4}}}{\sqrt{2}} \\ \frac{e^{\frac{i*\pi}{4}}}{\sqrt{2}} & \frac{1}{\sqrt{2}}
+    \end{bmatrix}} = 0 \\
+    &\text{Linearly dependent, so states are equivalent.} 
+\end{align*}
+\\
+\\
+\section{Exercise 2.3 }
+\textbf{A. }
+\begin{align*}
+    &\textbf{a) is a superposition with respect to the standard basis, } \\ &\textbf{and is not a superposition with respect to the Hadamard basis. } \\ \\ \\ 
+    &\textbf{b) is not a superposition with respect to the standard basis. } \\ \\ \\ 
+    &\textbf{c) is not a superposition with respect to the standard basis. } \\ \\ \\ 
+    &\textbf{d) is a superposition with respect to the standard basis. } \\ 
+    & \{ \frac{\sqrt{3}}{2}\ket{+} - \frac{1}{2}\ket{-}, \frac{1}{2}\ket{+} + \frac{\sqrt{3}}{2}\ket{-} \} \\ \\ \\ 
+    &\textbf{e) is not a superposition with respect to the standard basis. } \\ \\ 
+    & \textbf{f) is a superposition with respect to the standard basis, } \\ &\textbf{and is not a superposition with respect to the Hadamard basis. }
+\end{align*}
+\section{Exercise 2.4 } 
+\begin{align*}
+    &\textbf{a) is not a superposition with respect to the Hadamard basis. } \\ \\  
+    &\textbf{b) is a superposition with respect to the Hadamard basis. } \\ \\ 
+    &\textbf{c) is a superposition with respect to the Hadamard basis. } \\ \\
+    &\textbf{d) is a superposition with respect to the Hadamard basis. } \\ \\
+    &\textbf{e) is a superposition with respect to the Hadamard basis. } \\ \\
+    &\textbf{f) is not a superposition with respect to the Hadamard basis. } \\ \\
+\end{align*}
+\section{Exercise 2.5 }
+\begin{align*}
+&\textbf{ A. } \\ 
+& \frac{1}{\sqrt{2}}(\ket{+} + e^{i*\theta}\ket{-}) = \frac{1 + e^{i*\theta}}{2}\ket{0} + \frac{1 - e^{i*\theta}}{2}\ket{1} \\ 
+&\textbf{which is equivalent to } \ket{1} \textbf{ when } \frac{1 + e^{i*\theta}}{2} = 0 
+\\ &\textbf{so when } e^{i*\theta} = -1 
+\\ \\ 
+& \textbf{ Euler's Identity: } e^{i*\pi} + 1 = 0 \\ 
+& e^{i*pi} = -1 \\ &\textbf{So, } \theta = \pi \pm{2pi*x} \textbf{ where x is an integer} 
+\\ \\ \\ 
+\textbf{ B. } \\ 
+& e^{i*\theta}(\frac{1}{\sqrt{2}}\ket{i} + e^{i*\theta}\ket{-i}) = \frac{1}{\sqrt{2}}(\ket{-i} + e^{i*\theta}\ket{i} \\ 
+&\textbf{ So, the states are equivalent for any value of } \theta \\ \\ \\ 
+\textbf{ C. } \\ 
+& e^{i*\theta}(\frac{1}{2}\ket{0} - \frac{\sqrt{3}}{2}\ket{1} = e^{i*\theta}(\frac{1}{\sqrt{2}}(\ket{0} - \frac{\sqrt{3}}{2}\ket{1} \\ 
+&\textbf{ So, the states are equivalent for any value of } \theta \\ \\ \\ 
+\end{align*}
+\section{Exercise 2.6 }
+\begin{align*}
+&\textbf{A. } \\ 
+& \ket{0}: \frac{3}{4} \\ 
+& \ket{1}: \frac{1}{4} \\
+&\textbf{B. } \\ 
+& \ket{0}: \frac{1}{4} \\ 
+& \ket{1}: \frac{3}{4} \\
+&\textbf{C. } \\ 
+& \ket{0}: \frac{1}{2} \\ 
+& \ket{1}: \frac{1}{2} \\
+&\textbf{D. } \\ 
+& \ket{+}: \frac{1}{2} \\ 
+& \ket{-}: \frac{1}{2} \\
+&\textbf{E. } \\ 
+& \ket{i}: \frac{1}{2} \\ 
+& \ket{-i}: \frac{1}{2} \\
+&\textbf{F. } \\ 
+& \ket{i}: \frac{1}{2} \\ 
+& \ket{-i}: \frac{1}{2} \\
+&\textbf{G. } \\ 
+& \textbf{first: } \frac{2 + \sqrt{3}}{4} \\ 
+& \textbf{second: } \frac{2 - \sqrt{3}}{4}
+\end{align*}
+\section{ Exercise 2.7 }
+\begin{align*}
+&\textbf{A. } \\ 
+    &\textbf{Given: }\frac{1}{\sqrt{2}}(\ket{0} + i\ket{1}) = \ket{i} \\ 
+    &\textbf{Orthogonal vector: } \frac{1}{\sqrt{2}}(\ket{0} - i\ket{1}) = \ket{-i} \\ 
+    &\textbf{So, orthonormal basis is: } \{ \ket{i}, \ket{-i} \} \\ \\ 
+    \textbf{B. } \\ 
+    &\frac{1 + i}{2}\ket{0} - \frac{1 - i}{2}\ket{1} \\ 
+    &= (\frac{1 + i}{\sqrt{2}})(\frac{1}{\sqrt{2}}(\ket{0} + i\ket{1})) = (\frac{1 + i}{\sqrt{2}})\ket{i} \\ 
+    &\textbf{Orthogonal vector: } (\frac{1 + i}{\sqrt{2}})\frac{1}{\sqrt{2}}(\ket{0} - i\ket{1}) = \frac{1 + i}{\sqrt{2}}\ket{-i} \\
+    &\textbf{So, orthonormal basis is: } \{ \ket{i}, \ket{-i} \} \\ \\
+    \\ \textbf{C. } \\ 
+    &\textbf{Orthogonal vector: } \frac{1}{\sqrt{2}}(\ket{0} - e^{\frac{i*\pi}{6}}\ket{1})\\
+    &\textbf{So, orthonormal basis is: } \{ \frac{1}{\sqrt{2}}(\ket{0} + e^{\frac{i*\pi}{6}}\ket{1}), \frac{1}{\sqrt{2}}(\ket{0} - e^{\frac{i*\pi}{6}}\ket{1})\} \\ \\
+    \textbf{D. } \\ 
+    & \textbf{Orthogonal vector: } \frac{1}{2}\ket{+} + \frac{i*\sqrt{3}}{2}\ket{-} \\ 
+    & \textbf{ So, orthonormal basis is: } \{ \frac{1}{2}\ket{+} - \frac{i*\sqrt{3}}{2}\ket{-}, \frac{1}{2}\ket{+} + \frac{i*\sqrt{3}}{2}\ket{-}\} 
+\end{align*}
+\end{document}
