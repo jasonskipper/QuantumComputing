@@ -1,0 +1,233 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+
+\title{CIS4900 Quantum Computing Homework 1}
+\author{Michael Skipper, n01162792}
+\date{Due September 11, 2020}
+
+\begin{document}
+\maketitle
+
+
+
+\text{Note: Corrected Questions 1, 5, 10}
+
+\section{Question 1}
+\begin{align*} 
+    z &= \frac{3+i}{8-17i} \\ 
+    &= \frac{(3\times8) + (1\times(-17))}{8^2 + (-17)^2}
+    + \frac{(1\times8) - (3\times(-17))}{8^2 + (-17)^2}i \\ 
+    % &= \frac{24-17}{353} + \frac{8+17}{353}i \\ 
+    &= \frac{7}{353} + \frac{59}{353}i
+    \\ \\
+    F(z) &= \frac{7}{353} \\ \\ 
+    R(z) &= \frac{59}{353}
+\end{align*}
+
+
+
+\section{Question 2} 
+\begin{align*}
+z\textsubscript1 &= 1 + \frac{2}{3}i \\
+x\textsubscript1 &= 1 \\
+y\textsubscript1 &= \frac{2}{3} \\
+r\textsubscript1 &= \sqrt{(1)^2 + (\frac{2}{3})^2} = \frac{\sqrt{13}}{3} \\
+\varphi\textsubscript1 &= tan^{-1}(\frac{2}{3}) \\ 
+z = z\textsubscript1^{29} &= (\frac{\sqrt{13}}{3})^{29}(cos(29(tan^{-1}(\frac{2}{3}))) + isin(29(tan^{-1}(\frac{2}{3})))) \\
+R(z) &= (\frac{\sqrt{13}}{3})^{29}(cos(29(tan^{-1}(\frac{2}{3})))) \approx -46.48977604
+% r\textsubscript1 = \sqrt{(1)^2 + (\frac{2}{3})^2} = \frac{\sqrt{13}}{3} \\
+% z = (z\textsubscript1)\textsuperscript29 = (\frac{\sqrt{13}}{3})^2^9(cos29\varphi + isin29\varphi) \\
+\end{align*}
+
+
+
+
+
+
+\section{Question 3}
+\begin{align*}
+z &= \frac{2-3i}{3+5i} \\ 
+&= \frac{2\times3 + -3\times5}{3^2 + 5^2} + \frac{-3\times3 - 2\times5}{3^2+5^2}i \\ 
+&= \frac{6-15}{34} + \frac{-9-10}{34}i \\ 
+&= \frac{-9}{34} - \frac{19}{34}i
+\\  \\ \\ 
+x &= \frac{-9}{34}  \\ 
+y &= \frac{-19}{34} \\ 
+r &= \sqrt{(\frac{-9}{34})^2 + (\frac{-19}{34})^2} = \sqrt{\frac{13}{34}} \\ 
+\varphi &= tan^{-1}(\frac{(\frac{-19}{34})}{(\frac{-9}{34})}) \approx 1.128 \\ % 64.65 \\ 
+\\ \\ 
+z^{\frac{1}{4}} &= (\sqrt{\frac{13}{34}})^{\frac{1}{4}}(cos\frac{1}{4}\varphi + isin\frac{1}{4}\varphi)
+ \\ &= (\sqrt{\frac{13}{34}})^{\frac{1}{4}}(cos\frac{1}{4}(tan^{-1}(\frac{\frac{-19}{34}}{\frac{-9}{34}}) + isin\frac{1}{4}(tan^{-1}(\frac{\frac{-19}{34}}{\frac{-9}{34}})) 
+ \\ &\approx 0.8517114924 + 0.2468560872i 
+\end{align*}
+
+
+
+\section{Question 4}
+\begin{align*}
+    \alpha &= 2\sqrt{7}(cos\frac{3\pi}{11} + isin\frac{3\pi}{11}) \\ 
+    \beta &= 6\sqrt{2}(cos\frac{17\pi}{22} + isin\frac{17\pi}{22}) \\ 
+    |\beta - \alpha|^2 &= (2\sqrt{7})^2 + (6\sqrt{2}^2) - 2R(2\sqrt{7}e^{i\frac{3\pi}{11}} \times 6\sqrt{2}e^{i\frac{17\pi}{22}}) \\ 
+    &= 72 + 28 - 0 \\
+    &= 100 
+    \\ \\ 
+    |\beta - \alpha| &= \sqrt{100} = 10
+\end{align*}
+
+
+
+\section{Question 5}  
+\begin{align*}
+    \beta &= 6\sqrt{2}\cos{\frac{17\pi}{22}}
+    + 6\sqrt{2}\sin{\frac{17\pi}{22}}i
+    \\ &= -6.412747787 + 5.556677588i 
+    \\ 
+    \alpha &= 2\sqrt{7}\cos{\frac{3\pi}{11}}
+    + 2\sqrt{7}\cos{\frac{3\pi}{11}}i    
+    \\ &= 3.465197291 + 3.999050854i
+    \\ \\ 
+    \beta - \alpha &= (-6.412747787-3.465197291)
+    + (5.556677588 - 3.999050854)i 
+    \\ &= -9.877945078 + 1.557626734i 
+    \\ \\  
+    |\beta-\alpha| &= \sqrt{(-9.877945078)^2+(1.557626734)^2} 
+    \\ &= 10  
+    % |\beta - \alpha| &= |(6\sqrt{2}cos\frac{17\pi}{22} - 2\sqrt{7}cos\frac{3\pi}{11}) + i(6\sqrt{2}sin\frac{17\pi}{22} - 2\sqrt{7}sin\frac{3\pi}{11})| \\ 
+    % &= \sqrt{(6\sqrt{2}cos\frac{17\pi}{22} - 2\sqrt{7}cos\frac{3\pi}{11})^2 + (6\sqrt{2}sin\frac{17\pi}{22} - 2\sqrt{7}sin\frac{3\pi}{11})^2} \\ 
+    % &= 10 
+\end{align*}
+
+
+
+
+\section{Question 6}
+\begin{align*}
+    <x, y> = x^{T}y &= [-3 \hspace{3mm}-4]\begin{bmatrix}8 \\ -15\end{bmatrix} 
+    \\ &= (-3)(8) + (-4)(-15)  
+    \\ &= -24 + 60 
+    \\ &= 36 
+    \\ \\ \\ 
+    &||x|| = \sqrt{9 + 16} = 5 \\ 
+    &||y|| = \sqrt{64 + 225} = 17 
+    \\ \\ 
+    &(5)(17)cos\theta = 36   \\ 
+    &\theta = cos^{-1}(\frac{36}{5\times17}) \approx 64.94
+\end{align*}
+
+
+
+
+
+\section{Question 7}
+\begin{align*}
+    <x, y> &= [1 \hspace{3mm}-2 \hspace{3mm} 3]\begin{bmatrix}5 \\ -2 \\ -3\end{bmatrix}
+    \\ &= (1)(5) + (-2)(-2) + (3)(-3) = 5 + 4 - 9 = 0 \\ &\text{Thus, the vectors are orthogonal.} \\ 
+    \\ ||x|| &= \sqrt{1^2 + 4 + 9} = \sqrt{14} 
+    \\ ||y|| &= \sqrt{25 + 4 + 9} = \sqrt{38}
+    \\ \\ \\ 
+    &\hspace{3mm}z\textsubscript1 - 2z\textsubscript2 + 3z\textsubscript3 = 0\\
+    &+ \\ 
+    &\hspace{3mm}5z\textsubscript1 - 2z\textsubscript1 - 3z\textsubscript3 = 0 \\
+    &\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ 
+    \\ &\hspace{3mm}6z\textsubscript1 - 4z\textsubscript2 = 0
+    \\ \\ & z\textsubscript2 =\frac{-6z\textsubscript1}{-4} = \frac{3z\textsubscript1}{2}
+    \\ \\ \text{say } z\textsubscript1 &= 2, \text{then} z\textsubscript2 = 3 \\ 
+    2 - 2(3) + 3(z\textsubscript3) &= 0 => z\textsubscript3 = \frac{4}{3} \\ 
+    10 - 6 - 3z\textsubscript3 = 0 &=> 4 = 3z\textsubscript3 => z\textsubscript3 = \frac{4}{3} \\ \\ \\ 
+    &Z^{T} = \begin{bmatrix}z\textsubscript1 \hspace{2mm}z\textsubscript2\hspace{2mm} z\textsubscript3\end{bmatrix} = \begin{bmatrix}2\hspace{2mm}3\hspace{2mm}\frac{4}{3}\end{bmatrix} \\ \\ \\ 
+    &\hspace{2mm}\text{orthonormal basis: } \\
+    &\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ 
+    &\hspace{1mm}x^{T}\textsubscript{norm} = 
+    \begin{bmatrix}
+        \frac{1}{\sqrt{14}} \hspace{2mm} \frac{-2}{\sqrt{14}} \hspace{2mm} \frac{3}{\sqrt{14}}
+    \end{bmatrix} \\ 
+    &\hspace{1mm}y^{T}\textsubscript{norm} = 
+    \begin{bmatrix}
+        \frac{5}{\sqrt{38}} \hspace{2mm} \frac{-2}{\sqrt{38}} \hspace{2mm} \frac{-3}{\sqrt{38}}
+    \end{bmatrix} \\ 
+    &\hspace{1mm}z^{T}\textsubscript{norm}
+    \begin{bmatrix}
+        \frac{2}{\sqrt{\frac{133}{9}}} \hspace{2mm} \frac{3}{\sqrt{\frac{133}{9}}} \hspace{2mm} \frac{\frac{4}{3}}{\sqrt{\frac{133}{9}}}
+    \end{bmatrix} \\ 
+\end{align*}
+
+
+
+
+\section{Question 8} 
+\begin{align*}
+c\textsubscript1 = c\textsubscript2 &= 0 \text{ if } c\textsubscript1x + c\textsubscript2y = 0 \text{ ?} \\ \\ 
+&c\textsubscript1 = c\textsubscript{11} + c\textsubscript{12}i \\ 
+&c\textsubscript2 = c\textsubscript{21} + c\textsubscript{22}i \\ \\  
+(c\textsubscript{11} + c\textsubscript{12}i)(1+3i) &+ (c\textsubscript{21} + c\textsubscript{22}i)(2-i) = 0 
+\\ (c\textsubscript{11} + 3ic\textsubscript{11} + ic\textsubscript{12} + 3i^2c\textsubscript{12}) &+ (2c\textsubscript{21} - ic\textsubscript{21} + 2ic\textsubscript{22} - i^2c\textsubscript{22}) = 0 \\ \\  
+\fbox{(c\textsubscript{11} - 3c\textsubscript{12} + 2c\textsubscript{21} + c\textsubscript{22}) + (3c\textsubscript{11} + c\textsubscript{12} - c\textsubscript{21} + 2c\textsubscript{22})i = 0}&
+\\ \\ 
+(c\textsubscript{11} + c\textsubscript{12}i)(-2i) &+ (c\textsubscript{21} + c\textsubscript{22}i)(3i) = 0 
+\\  
+0c\textsubscript{11} - 2ic\textsubscript{11} + 0ic\textsubscript{12} - 2i^2c\textsubscript{12} &+ 
+0c\textsubscript{21} + 3ic\textsubscript{21} + 0ic\textsubscript{22} + 3i^2c\textsubscript{22} = 0 
+\\ 
+-2ic\textsubscript{11} + 2c\textsubscript{12} &+ 3ic\textsubscript{21} - 3c\textsubscript{22} = 0 
+\\ 
+\fbox{(2c\textsubscript{12} - 3c\textsubscript{22}) + (-2c\textsubscript{11} + 3c\textsubscript{21})i = 0 }&
+\\ \\ 
+\begin{bmatrix} 
+1 & -3 & 2 & 1 \\ 
+3 & 1 & -1 & 2 \\ 
+0 & 2 & 0 & -3 \\ 
+-2 & 0 & 3 & 0 
+\end{bmatrix}
+\begin{bmatrix}
+c\textsubscript{11} \\ c\textsubscript{12} \\ c\textsubscript{21} \\ c\textsubscript{22} 
+\end{bmatrix}
+= 
+\begin{bmatrix}
+0 \\ 0 \\ 0 \\ 0
+\end{bmatrix} \\ \\ 
+\text{By Gaussian Elimination, } \\ 
+c\textsubscript{11} = c\textsubscript{12} = c\textsubscript{21} = c\textsubscript{22} = 0 \\ 
+\text{Thus, the vectors x and y are linearly independent.}
+\end{align*}
+
+\section{Question 9}  
+\begin{align*}
+    <u|v> &= \begin{bmatrix}
+    1-3i & 2i 
+    \end{bmatrix}
+    \begin{bmatrix}
+    2-i \\ 3i 
+    \end{bmatrix} = (1-3i)(2-i) + (2i)(3i) \\ &= 2 - i - 6i + 3i^2 + 6i^2 \\ &= 2 - 3 - 6 - i - 6i \\ &= \fbox{-7-7i} \\ \\ \\ 
+    <v|u>^{*} &= \begin{bmatrix}
+    2+i & -3i
+    \end{bmatrix} 
+    \begin{bmatrix}
+    1+3i \\ -2i 
+    \end{bmatrix}
+    = (2+i)(1+3i) + (-3i)(-2i) \\ &= 2 + 6i + i + 3i^2 + 6i^2 \\ &= 2 - 3 - 6 + i + 6i \\ &= \fbox{-7-7i} \\ \\ \text{Thus, } \\ &<u|v> = <v|u>^{*}
+\end{align*}
+
+
+\section{Question 10}
+\begin{align*} 
+    |u>|v> &= \begin{bmatrix}
+    (1+3i)(2-i) \\ (1+3i)(3i) \\ (-2i)(2-i) \\ (-2i)(3i) 
+    \end{bmatrix} 
+    = 
+    \begin{bmatrix}
+    2 - i + 6i - 3i^2 \\ 3i + 9i^2 \\ -4i + 2i^2 \\ -6i^2
+    \end{bmatrix} \\ &= 
+    \begin{bmatrix}
+    3 + 3 - i + 6i \\ 3i-9 \\ -4i-2 \\ 6
+    \end{bmatrix} \\ &= \begin{bmatrix}
+    5 + 5i \\ -9+3i \\ -2-4i \\ 6 
+    \end{bmatrix} \\ \\ \\ 
+    |u><v|& = \begin{bmatrix}
+    (2+i)(1+3i) & -((3i)(1+3i)) \\ 
+    (2+i)(-2i) & -((3i)(-2i)) \end{bmatrix} \\ 
+    &= \begin{bmatrix}
+    -1+7i & 9-3i \\ 2-4i & -6
+    \end{bmatrix}
+\end{align*} 
+\end{document}
